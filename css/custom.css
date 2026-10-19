@@ -1,0 +1,76 @@
+/* Фирменные стили проекта «Гардероб» поверх Bootstrap 5.
+   Файл подключается ПОСЛЕ bootstrap.min.css, поэтому может
+   точечно переопределять стандартные компоненты. */
+
+:root {
+  --garderob-primary: #0057b8;
+  --garderob-primary-dark: #003f86;
+  --garderob-accent: #f4cccc;
+}
+
+/* Первый экран главной страницы */
+.hero {
+  background: linear-gradient(135deg, var(--garderob-primary) 0%, var(--garderob-primary-dark) 100%);
+}
+
+/* Блоки преимуществ */
+.feature {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.feature:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08);
+}
+.feature-icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+/* Карточки товаров: лёгкая модификация поверх Bootstrap */
+.product-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+.product-card .card-img-top {
+  object-fit: cover;
+}
+
+/* Основной цвет кнопок приведён к фирменному */
+.btn-primary {
+  --bs-btn-bg: var(--garderob-primary);
+  --bs-btn-border-color: var(--garderob-primary);
+  --bs-btn-hover-bg: var(--garderob-primary-dark);
+  --bs-btn-hover-border-color: var(--garderob-primary-dark);
+  --bs-btn-active-bg: var(--garderob-primary-dark);
+  --bs-btn-active-border-color: var(--garderob-primary-dark);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--garderob-primary);
+  --bs-btn-border-color: var(--garderob-primary);
+  --bs-btn-hover-bg: var(--garderob-primary);
+  --bs-btn-hover-border-color: var(--garderob-primary);
+  --bs-btn-active-bg: var(--garderob-primary-dark);
+  --bs-btn-active-border-color: var(--garderob-primary-dark);
+}
+
+/* Ссылки и заголовок активного пункта меню */
+a {
+  color: var(--garderob-primary);
+}
+.navbar-dark .nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
+
+/* Страница товара: рамка вокруг характеристик */
+.product-figure {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}

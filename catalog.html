@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — Гардероб</title>
+  <meta name="description" content="Каталог товаров интернет-магазина «Гардероб»: Bootstrap-сетка, карточки и значки.">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Гардероб</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+
+    <h1 class="mb-3">Каталог товаров</h1>
+    <p class="text-muted">Верхняя одежда, трикотаж и аксессуары. Всего 12 позиций.</p>
+
+    <!-- Фильтры по категориям (btn-group) -->
+    <div class="d-flex flex-wrap gap-2 mb-4" role="group" aria-label="Фильтр по категориям">
+      <button class="btn btn-primary btn-sm" type="button">Все товары</button>
+      <button class="btn btn-outline-primary btn-sm" type="button">Верхняя одежда</button>
+      <button class="btn btn-outline-primary btn-sm" type="button">Трикотаж</button>
+      <button class="btn btn-outline-primary btn-sm" type="button">Аксессуары</button>
+    </div>
+
+    <div class="alert alert-warning" role="alert">
+      Товары со значком <span class="badge text-bg-warning">Скидка</span> действительны до конца месяца.
+    </div>
+
+    <!-- Сетка товаров: 1 колонка на телефоне, 2 — на планшете, 3 — на десктопе -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <span class="badge text-bg-danger position-absolute top-0 end-0 m-2">Хит</span>
+          <img src="images/product-1.svg" class="card-img-top" alt="Свитер крупной вязки" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Свитер крупной вязки</h2>
+            <p class="card-text text-muted">Мягкий свитер из толстой пряжи.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">3 900 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <span class="badge text-bg-success position-absolute top-0 end-0 m-2">Новинка</span>
+          <img src="images/product-2.svg" class="card-img-top" alt="Кардиган на пуговицах" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Кардиган на пуговицах</h2>
+            <p class="card-text text-muted">Удлинённый кардиган с карманами.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">4 700 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <span class="badge text-bg-warning position-absolute top-0 end-0 m-2">Скидка</span>
+          <img src="images/product-3.svg" class="card-img-top" alt="Пальто демисезонное" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Пальто демисезонное</h2>
+            <p class="card-text text-muted">Классика свободного кроя.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">8 200 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <img src="images/product-4.svg" class="card-img-top" alt="Куртка кожаная" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Куртка кожаная</h2>
+            <p class="card-text text-muted">Эко-кожа, приталенный силуэт.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">6 400 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <img src="images/product-5.svg" class="card-img-top" alt="Водолазка тонкая" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Водолазка тонкая</h2>
+            <p class="card-text text-muted">Базовая водолазка, 8 цветов.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">1 800 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <span class="badge text-bg-danger position-absolute top-0 end-0 m-2">Хит</span>
+          <img src="images/product-6.svg" class="card-img-top" alt="Джемпер с горловиной" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Джемпер с горловиной</h2>
+            <p class="card-text text-muted">Тёплый джемпер на каждый день.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">2 900 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <img src="images/product-7.svg" class="card-img-top" alt="Сумка кожаная" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Сумка кожаная</h2>
+            <p class="card-text text-muted">Компактная сумка через плечо.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">3 500 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <img src="images/product-8.svg" class="card-img-top" alt="Шарф вязаный" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Шарф вязаный</h2>
+            <p class="card-text text-muted">Шарф крупной вязки, unisex.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">1 200 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col">
+        <article class="card h-100 product-card">
+          <img src="images/product-4.svg" class="card-img-top" alt="Плащ лёгкий" width="300" height="200">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5">Плащ лёгкий</h2>
+            <p class="card-text text-muted">Плащ на весну, непромокаемый.</p>
+            <p class="card-text fw-bold fs-5 mt-auto mb-2">5 600 ₽</p>
+            <div class="d-flex gap-2">
+              <a class="btn btn-primary btn-sm" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary btn-sm" type="button"
+                      data-bs-toggle="modal" data-bs-target="#orderModal">Заказать</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- Пагинация -->
+    <nav class="mt-4" aria-label="Страницы каталога">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Назад</a></li>
+        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">Вперёд</a></li>
+      </ul>
+    </nav>
+
+  </main>
+
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row gy-2">
+        <div class="col-md-6">
+          <p class="mb-0 fw-bold">Гардероб — учебный проект КР-2</p>
+          <p class="mb-0 text-white-50">Интернет-магазин одежды на Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="link-light me-3" href="catalog.html">Каталог</a>
+          <a class="link-light me-3" href="order.html">Заявка</a>
+          <a class="link-light" href="contacts.html">Контакты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрого заказа (modal) -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form class="modal-body">
+          <div class="mb-3">
+            <label class="form-label" for="modal-name">Имя</label>
+            <input class="form-control" id="modal-name" name="name" type="text" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="modal-phone">Телефон</label>
+            <div class="input-group">
+              <span class="input-group-text">+7</span>
+              <input class="form-control" id="modal-phone" name="phone" type="tel" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="modal-product">Товар</label>
+            <select class="form-select" id="modal-product" name="product">
+              <option selected>Свитер крупной вязки</option>
+              <option>Кардиган на пуговицах</option>
+              <option>Пальто демисезонное</option>
+              <option>Другой товар из каталога</option>
+            </select>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" id="modal-agreement" type="checkbox" required>
+            <label class="form-check-label" for="modal-agreement">Согласен на обработку данных</label>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Отправить заявку</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

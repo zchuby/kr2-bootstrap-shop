@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Свитер крупной вязки — Гардероб</title>
+  <meta name="description" content="Страница товара: свитер крупной вязки. Характеристики, цена и оформление заявки.">
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" aria-label="Основная навигация">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Гардероб</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+
+    <nav aria-label="Хлебные крошки">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Свитер крупной вязки</li>
+      </ol>
+    </nav>
+
+    <div class="row g-4 align-items-start">
+
+      <!-- Фото товара -->
+      <div class="col-12 col-lg-6">
+        <div class="product-figure">
+          <img src="images/product-1.svg" class="img-fluid rounded" alt="Свитер крупной вязки" width="600" height="400">
+        </div>
+        <div class="alert alert-info mt-3" role="alert">
+          Товар в наличии — отправим в день заказа. Размеры: S, M, L, XL.
+        </div>
+      </div>
+
+      <!-- Описание товара -->
+      <div class="col-12 col-lg-6">
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <h1 class="h3 mb-0">Свитер крупной вязки</h1>
+          <span class="badge text-bg-danger">Хит</span>
+        </div>
+        <p class="text-muted">Артикул: SV-001 · Категория: трикотаж</p>
+        <p>
+          Мягкий свитер из толстой пряжи с круглым вырезом. Держит форму после стирки,
+          не колется и подходит для повседневной носки осенью и зимой.
+        </p>
+        <p class="display-6 fw-bold">3 900 ₽</p>
+        <div class="d-flex gap-2 flex-wrap mb-4">
+          <a class="btn btn-primary btn-lg" href="order.html">Оформить заказ</a>
+          <button class="btn btn-outline-primary btn-lg" type="button"
+                  data-bs-toggle="modal" data-bs-target="#orderModal">Быстрая заявка</button>
+        </div>
+
+        <!-- Дополнительный компонент: accordion -->
+        <div class="accordion" id="productInfo">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#infoChars" aria-expanded="true" aria-controls="infoChars">
+                Характеристики
+              </button>
+            </h2>
+            <div id="infoChars" class="accordion-collapse collapse show" data-bs-parent="#productInfo">
+              <div class="accordion-body">
+                <table class="table table-striped mb-0">
+                  <caption class="visually-hidden">Характеристики товара</caption>
+                  <tbody>
+                    <tr><th scope="row">Состав</th><td>50% шерсть, 50% акрил</td></tr>
+                    <tr><th scope="row">Плотность</th><td>крупная вязка</td></tr>
+                    <tr><th scope="row">Размеры</th><td>S–XL</td></tr>
+                    <tr><th scope="row">Цвета</th><td>молочный, серый, тёмно-синий</td></tr>
+                    <tr><th scope="row">Уход</th><td>ручная стирка до 30 °C</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#infoDelivery" aria-expanded="false" aria-controls="infoDelivery">
+                Доставка и оплата
+              </button>
+            </h2>
+            <div id="infoDelivery" class="accordion-collapse collapse" data-bs-parent="#productInfo">
+              <div class="accordion-body">
+                Доставка СДЭК и Почтой России — от 2 до 7 дней. Оплата картой онлайн
+                или при получении. Бесплатно от 5000 ₽.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#infoReturn" aria-expanded="false" aria-controls="infoReturn">
+                Возврат
+              </button>
+            </h2>
+            <div id="infoReturn" class="accordion-collapse collapse" data-bs-parent="#productInfo">
+              <div class="accordion-body">
+                14 дней на возврат, если товар не подошёл. Вещь должна сохранить
+                бирки и товарный вид.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Похожие товары -->
+    <section class="mt-5" aria-labelledby="similar-title">
+      <h2 id="similar-title">Похожие товары</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <article class="card h-100 product-card">
+            <img src="images/product-6.svg" class="card-img-top" alt="Джемпер с горловиной" width="300" height="200">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Джемпер с горловиной</h3>
+              <p class="card-text fw-bold fs-5 mt-auto mb-2">2 900 ₽</p>
+              <a class="btn btn-outline-primary" href="product.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 product-card">
+            <img src="images/product-5.svg" class="card-img-top" alt="Водолазка тонкая" width="300" height="200">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Водолазка тонкая</h3>
+              <p class="card-text fw-bold fs-5 mt-auto mb-2">1 800 ₽</p>
+              <a class="btn btn-outline-primary" href="product.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
+        <div class="col">
+          <article class="card h-100 product-card">
+            <img src="images/product-2.svg" class="card-img-top" alt="Кардиган на пуговицах" width="300" height="200">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Кардиган на пуговицах</h3>
+              <p class="card-text fw-bold fs-5 mt-auto mb-2">4 700 ₽</p>
+              <a class="btn btn-outline-primary" href="product.html">Подробнее</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row gy-2">
+        <div class="col-md-6">
+          <p class="mb-0 fw-bold">Гардероб — учебный проект КР-2</p>
+          <p class="mb-0 text-white-50">Интернет-магазин одежды на Bootstrap 5.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="link-light me-3" href="catalog.html">Каталог</a>
+          <a class="link-light me-3" href="order.html">Заявка</a>
+          <a class="link-light" href="contacts.html">Контакты</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно быстрого заказа (modal) -->
+  <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="orderModalLabel">Быстрая заявка</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <form class="modal-body">
+          <div class="mb-3">
+            <label class="form-label" for="modal-name">Имя</label>
+            <input class="form-control" id="modal-name" name="name" type="text" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="modal-phone">Телефон</label>
+            <div class="input-group">
+              <span class="input-group-text">+7</span>
+              <input class="form-control" id="modal-phone" name="phone" type="tel" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="modal-product">Товар</label>
+            <select class="form-select" id="modal-product" name="product">
+              <option selected>Свитер крупной вязки</option>
+              <option>Кардиган на пуговицах</option>
+              <option>Пальто демисезонное</option>
+              <option>Другой товар из каталога</option>
+            </select>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" id="modal-agreement" type="checkbox" required>
+            <label class="form-check-label" for="modal-agreement">Согласен на обработку данных</label>
+          </div>
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Отправить заявку</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
